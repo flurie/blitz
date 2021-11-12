@@ -2,7 +2,7 @@ set(blitz_LIB_SRCS globals.cpp)
 add_library(blitz SHARED ${blitz_LIB_SRCS})
 
 if (ENABLE_SERIALISATION)
-	set(Boost_USE_STATIC_LIBS        ON) # only find static libs
+	set(Boost_USE_STATIC_LIBS        OFF) # only find static libs
 	set(Boost_USE_MULTITHREADED      ON)
 	set(Boost_USE_STATIC_RUNTIME    OFF)
     find_package(Boost COMPONENTS serialization)
